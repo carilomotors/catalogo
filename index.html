@@ -273,7 +273,6 @@ table.sp td:first-child{color:var(--mut);width:46%}
   <div><h4>Horarios</h4><p>Lunes a viernes de 9:00 a 18:00 h<br>Sábados de 9:00 a 14:00 h</p></div>
   <div><h4>Contacto</h4><p><a data-wa="Hola Carilo Motors! Quería hacer una consulta." target="_blank" rel="noopener">WhatsApp 11 3602-6395</a></p></div>
 </div>
-<div class="wrap" style="margin-top:26px;font-size:12.5px;opacity:.7" id="upd"></div>
 </footer>
 
 <a class="fab" data-wa="Hola Carilo Motors! Quería hacer una consulta." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg></a>
@@ -459,9 +458,37 @@ window.addEventListener('hashchange', route);
 /* ---------- carga ---------- */
 $('#grid').innerHTML = Array(8).fill('<div class="card"><div class="ph skel"></div><div class="bd"><div class="skel" style="height:60px;border-radius:8px"></div></div></div>').join('');
 setWaLinks();
-fetch('data/autos.json?v=' + Date.now()).then(r => r.json()).then(d => {
-  ALL = d.vehiculos;
-  $('#upd').textContent = `Catálogo actualizado el ${d.actualizado}.`;
+/* ---------- datos: ml.json (lo actualiza el agente) + extra.json (lo que no está en ML) ---------- */
+const ML_IMG = id => `https://http2.mlstatic.com/D_NQ_NP_2X_${id}-F.jpg`;
+const FB_IMG = u => `https://firebasestorage.googleapis.com/v0/b/carilo-motors.firebasestorage.app/o/${u}`;
+const EQ_LABEL = {'Con cámara de retroceso':'Cámara de retroceso','Airbag para conductor y pasajero':'Airbags frontales','Cierre centralizado de puertas':'Cierre centralizado',
+  'Comando remoto para radio en el volante':'Comandos al volante','Porta equipaje en techo':'Barras de techo','Soporte para rueda de auxilio':'Auxilio en portón',
+  'Tercera luz de freno led':'Tercera luz de freno LED','Con precio negociable':null,'Airbag conductor':null,'AM/FM':null,'Porta vasos':null,'Entrada auxiliar':null};
+const EQ_ORDER = ['Único dueño','Tapizado de cuero','Cámara de retroceso','Sensor de estacionamiento','Climatizador','Piloto automático','Control de estabilidad','Tracción ASR',
+  'Frenos ABS','Airbags frontales','Llantas de aleación','Sensor de lluvia','Bluetooth','Comandos al volante','Computadora de abordo','Aire acondicionado','Cristales eléctricos','Cierre centralizado','Alarma','Barras de techo'];
+const MODELO_FIX = {'Palio Weekend Adventure':['Fiat','Palio Weekend','Adventure 1.6 16V']};
+const eqClean = l => [...new Set((l||[]).map(e => e in EQ_LABEL ? EQ_LABEL[e] : e).filter(Boolean))]
+  .sort((a,b) => (EQ_ORDER.indexOf(a)+1||99) - (EQ_ORDER.indexOf(b)+1||99));
+const tipoDe = c => /suv/i.test(c||'') ? 'suv' : /pick/i.test(c||'') ? 'pickup' : /moto/i.test(c||'') ? 'moto' : 'auto';
+function fromML(r){
+  const a = r.a || {}; let [marca, modelo, version] = [a['Marca'], a['Modelo'], a['Versión']||''];
+  if (MODELO_FIX[modelo]) [marca, modelo, version] = MODELO_FIX[modelo];
+  const comb = (a['Tipo de combustible']||'').replace('Híbrido/Nafta','Híbrido');
+  return {code:r.code||('ML-'+r.id.slice(-6)), ml:r.id, marca, modelo, version, anio:+a['Año']||0, km:+(a['Kilómetros']||'0').replace(/\D/g,''),
+    comb, caja:a['Transmisión'], tipo:r.tipo||tipoDe(a['Tipo de carrocería']), carroceria:a['Tipo de carrocería'], color:a['Color'], puertas:a['Puertas'],
+    motor:a['Motor'], potencia:a['Potencia'], traccion:a['Control de tracción'], direccion:r.dir, cur:r.cur, precio:r.p, permuta:r.perm,
+    eq:eqClean(r.eq), fotos:(r.pics||[]).map(ML_IMG), texto:r.intro||'', gnc:/GNC/.test(comb)};
+}
+function fromExtra(x){
+  let fotos;
+  if (x.img){ const c = x.cover||1; fotos = [c, ...Array.from({length:x.n},(_,i)=>i+1).filter(i=>i!==c)].map(i=>`img/${x.img}/${String(i).padStart(2,'0')}.jpg`); }
+  else fotos = (x.fb||[]).map(FB_IMG);
+  return {code:x.code, ml:null, marca:x.marca, modelo:x.modelo, version:x.version||'', anio:x.anio, km:x.km, comb:x.comb, caja:x.caja, tipo:x.tipo,
+    color:x.color, cur:x.cur, precio:x.p, permuta:x.perm, eq:eqClean(x.eq), fotos, texto:x.texto||'', gnc:/GNC/.test(x.comb)};
+}
+const bust = '?v=' + Date.now();
+Promise.all([fetch('data/ml.json'+bust).then(r=>r.json()), fetch('data/extra.json'+bust).then(r=>r.json()).catch(()=>[])]).then(([ml, extra]) => {
+  ALL = [...ml.filter(r => !r.pausada).map(fromML), ...extra.filter(x => !x.oculto).map(fromExtra)];
   render(); route();
 }).catch(() => { $('#grid').innerHTML = '<div class="empty">No pudimos cargar el catálogo. Probá de nuevo en un momento.</div>'; });
 </script>
