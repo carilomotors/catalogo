@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carilo Motors · Autos usados en Castelar</title>
+<meta name="description" content="Autos, SUV, pick-ups y motos seleccionados en Castelar, zona oeste. Tomamos tu usado y financiamos con DNI. Av. Sarmiento 2671.">
+<meta name="theme-color" content="#08090c">
+<meta property="og:title" content="Carilo Motors · Catálogo">
+<meta property="og:description" content="Autos seleccionados en Castelar. Tomamos tu usado · Financiación con DNI.">
+<meta property="og:image" content="https://carilomotors.com.ar/img/og.jpg">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://http2.mlstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08090c; --bg2:#101217; --card:#14171d; --line:#232730; --txt:#f3f6f9; --mut:#9aa4b2;
+  --cel:#5cc8ff; --cel2:#2fb4f5; --wa:#25d366; --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--txt);font:15px/1.5 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:30;background:rgba(8,9,12,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:900;letter-spacing:.04em;font-size:20px}
+.logo b{color:var(--cel);font-weight:900}
+.nav{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--mut)}
+.nav a:hover{color:var(--txt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:11px 18px;font-weight:700;cursor:pointer;white-space:nowrap;transition:transform .15s,filter .15s}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--wa);color:#04210f}
+.btn-cel{background:var(--cel);color:#03131d}
+.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
+.btn svg{width:18px;height:18px;flex:none}
+@media(max-width:760px){.nav a.lnk{display:none}.top .btn-wa span{display:none}.top .btn-wa{padding:10px}}
+
+/* hero */
+.hero{padding:56px 0 34px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:620px;height:620px;background:radial-gradient(closest-side,rgba(92,200,255,.18),transparent);pointer-events:none}
+.hero h1{font-size:clamp(34px,6vw,64px);line-height:1.02;font-weight:900;letter-spacing:-.025em;max-width:820px}
+.hero h1 em{font-style:normal;color:var(--cel)}
+.hero p{color:var(--mut);font-size:17px;margin-top:16px;max-width:620px}
+.perks{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.perk{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:600}
+.perk i{width:8px;height:8px;border-radius:50%;background:var(--cel)}
+
+/* toolbar */
+.tools{position:sticky;top:64px;z-index:20;background:var(--bg);padding:14px 0 12px;border-bottom:1px solid var(--line)}
+.row1{display:flex;gap:10px}
+.search{flex:1;position:relative}
+.search input{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 42px;outline:none}
+.search input:focus{border-color:var(--cel)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--mut)}
+select.sort{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:0 12px;outline:none;cursor:pointer}
+.chips{display:flex;gap:8px;margin-top:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:transparent;border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--mut)}
+.chip span{opacity:.6;margin-left:4px;font-weight:500}
+.chip.on{background:var(--txt);color:var(--bg);border-color:var(--txt)}
+.chip.on span{opacity:.55}
+.sep{flex:none;width:1px;background:var(--line);margin:4px 2px}
+
+/* grid */
+.count{color:var(--mut);font-size:13.5px;margin:18px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding-bottom:60px}
+@media(max-width:600px){.grid{grid-template-columns:1fr 1fr;gap:10px}.wrap{padding:0 14px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:#34404f}
+.ph{position:relative;aspect-ratio:4/5;background:#0d0f13;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:center 62%;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.ph:after{content:"";position:absolute;inset:auto 0 0 0;height:38%;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.badge{position:absolute;z-index:2;top:10px;left:10px;background:rgba(8,9,12,.75);backdrop-filter:blur(6px);border-radius:8px;padding:4px 8px;font-size:11.5px;font-weight:700;letter-spacing:.03em}
+.badge.cel{left:auto;right:10px;background:var(--cel);color:#03131d}
+.ph .yr{position:absolute;z-index:2;left:12px;bottom:10px;font-weight:800;font-size:13px;color:#fff}
+.ph .nf{position:absolute;z-index:2;right:12px;bottom:10px;font-size:12px;color:#dfe6ee;display:flex;gap:5px;align-items:center}
+.ph .nf svg{width:14px;height:14px}
+.bd{padding:14px 14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.mk{color:var(--cel);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.md{font-size:19px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
+.vr{color:var(--mut);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.specs{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.specs span{background:#1c2028;border-radius:6px;padding:3px 7px;font-size:12px;color:#c9d2dc}
+.pr{margin-top:auto;padding-top:10px;display:flex;align-items:flex-end;justify-content:space-between;gap:8px;border-top:1px solid var(--line)}
+.pr .l{font-size:10.5px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.pr .v{font-size:21px;font-weight:900;letter-spacing:-.02em}
+.pr .p{text-align:right}
+.pr .p .v{font-size:13.5px;color:var(--cel);font-weight:700}
+@media(max-width:600px){.md{font-size:15.5px}.bd{padding:10px 10px 12px}.pr .v{font-size:16px}.pr .p{display:none}.specs span:nth-child(n+3){display:none}.vr{font-size:12px}}
+.empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:60px 0}
+
+/* sections */
+section.blk{padding:64px 0;border-top:1px solid var(--line)}
+.blk h2{font-size:clamp(26px,4vw,40px);font-weight:900;letter-spacing:-.02em;line-height:1.1}
+.blk p.sub{color:var(--mut);margin-top:10px;max-width:640px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+@media(max-width:800px){.two{grid-template-columns:1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.box h3{font-size:19px;font-weight:800;margin-bottom:8px}
+.box p{color:var(--mut)}
+.box ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.box li{display:flex;gap:10px;align-items:flex-start}
+.box li:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cel);margin-top:8px;flex:none}
+form.sell{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+form.sell input{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px;outline:none;width:100%}
+form.sell input:focus{border-color:var(--cel)}
+form.sell .btn{grid-column:1/-1}
+@media(max-width:600px){form.sell{grid-template-columns:1fr 1fr}}
+
+footer{border-top:1px solid var(--line);padding:44px 0 90px;color:var(--mut);font-size:14px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+footer h4{color:var(--txt);font-size:14px;margin-bottom:8px}
+footer a:hover{color:var(--txt)}
+@media(max-width:700px){footer .cols{grid-template-columns:1fr}}
+.fab{position:fixed;right:18px;bottom:18px;z-index:25;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.fab svg{width:30px;height:30px;color:#04210f}
+
+/* ficha */
+.ov{position:fixed;inset:0;z-index:50;background:var(--bg);overflow-y:auto;display:none;-webkit-overflow-scrolling:touch}
+.ov.open{display:block}
+.ov .bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 20px;background:rgba(8,9,12,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.ov .bar .ttl{font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.iconbtn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--bg2);display:grid;place-items:center;cursor:pointer;flex:none}
+.iconbtn svg{width:18px;height:18px}
+.fx{max-width:1240px;margin:0 auto;padding:22px 20px 120px;display:grid;grid-template-columns:1.25fr 1fr;gap:34px}
+@media(max-width:900px){.fx{grid-template-columns:1fr;padding:0 0 120px;gap:0}.fx .info{padding:20px 16px}}
+.fx>div{min-width:0}.gal{position:relative}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--r);background:#0d0f13}
+.slides::-webkit-scrollbar{display:none}
+.slides img{flex:none;width:100%;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:center}
+@media(min-width:901px){.slides img{aspect-ratio:4/4.4}}
+@media(max-width:900px){.slides{border-radius:0}}
+.gnav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(8,9,12,.7);border:0;display:grid;place-items:center;cursor:pointer}
+.gnav.l{left:12px}.gnav.r{right:12px}
+.gnav svg{width:20px;height:20px}
+.gcount{position:absolute;right:12px;bottom:12px;background:rgba(8,9,12,.75);border-radius:999px;padding:4px 10px;font-size:12.5px;font-weight:600}
+.thumbs{display:flex;gap:8px;overflow-x:auto;margin-top:10px;scrollbar-width:none}
+.thumbs img{width:64px;height:64px;object-fit:cover;border-radius:8px;opacity:.5;cursor:pointer;flex:none;border:2px solid transparent}
+.thumbs img.on{opacity:1;border-color:var(--cel)}
+@media(max-width:900px){.thumbs{padding:0 16px}}
+.info .mk{font-size:13px}
+.info h1{font-size:clamp(28px,4vw,40px);font-weight:900;letter-spacing:-.02em;line-height:1.08;margin-top:4px}
+.info .vr{font-size:15px;white-space:normal;margin-top:4px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.kpi small{display:block;color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.kpi b{font-size:15px}
+@media(max-width:420px){.kpis{grid-template-columns:1fr 1fr}}
+.pbox{margin-top:16px;background:linear-gradient(135deg,#121820,#0f1319);border:1px solid #24364a;border-radius:var(--r);padding:18px;display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.pbox .l{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.pbox .v{font-size:34px;font-weight:900;letter-spacing:-.02em;line-height:1.1}
+.pbox .p .v{font-size:20px;color:var(--cel)}
+.pbox .note{width:100%;font-size:12.5px;color:var(--mut)}
+.acts{display:grid;grid-template-columns:1fr auto auto;gap:8px;margin-top:14px}
+.acts .btn{padding:14px 18px}
+.h3{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin:28px 0 10px}
+table.sp{width:100%;border-collapse:collapse;font-size:14.5px}
+table.sp td{padding:9px 0;border-bottom:1px solid var(--line)}
+table.sp td:first-child{color:var(--mut);width:46%}
+.eqs{display:flex;flex-wrap:wrap;gap:8px}
+.eqs span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px}
+.txt{color:#c9d2dc;white-space:pre-line}
+.cta2{display:grid;gap:10px;margin-top:8px}
+.cta2 .box{padding:16px}
+.cta2 .box h3{font-size:16px;margin-bottom:4px}
+.cta2 .box p{font-size:14px}
+.sticky-cta{display:none}
+@media(max-width:900px){.acts{display:none}.sticky-cta{display:grid;grid-template-columns:1fr auto;gap:8px;position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(8,9,12,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line);z-index:6}.sticky-cta .btn{padding:14px}}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--txt);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;z-index:80;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+.skel{background:linear-gradient(90deg,#14171d,#1b1f27,#14171d);background-size:200% 100%;animation:sk 1.2s infinite}
+@keyframes sk{to{background-position:-200% 0}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#" onclick="closeFicha();return true">CARILO <b>MOTORS</b></a>
+  <nav class="nav">
+    <a class="lnk" href="#catalogo">Catálogo</a>
+    <a class="lnk" href="#vender">Vendé tu auto</a>
+    <a class="lnk" href="#financiacion">Financiación</a>
+    <a class="btn btn-wa" data-wa="Hola Carilo Motors! Quería hacer una consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <h1>Tu próximo auto <em>está acá.</em></h1>
+  <p>Autos, SUV, pick-ups y motos seleccionados, listos para transferir. Vení a verlos a Castelar o consultanos por WhatsApp.</p>
+  <div class="perks">
+    <div class="perk"><i></i>Tomamos tu usado</div>
+    <div class="perk"><i></i>Financiación con DNI</div>
+    <div class="perk"><i></i>Gestoría propia</div>
+    <div class="perk"><i></i>Av. Sarmiento 2671, Castelar</div>
+  </div>
+</div></section>
+
+<div class="tools" id="catalogo"><div class="wrap">
+  <div class="row1">
+    <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Buscar marca, modelo o año" autocomplete="off"></label>
+    <select class="sort" id="sort" aria-label="Ordenar">
+      <option value="rec">Destacados</option>
+      <option value="pa">Menor precio</option>
+      <option value="pd">Mayor precio</option>
+      <option value="an">Más nuevos</option>
+      <option value="km">Menos km</option>
+    </select>
+  </div>
+  <div class="chips" id="chips"></div>
+</div></div>
+
+<main class="wrap">
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<section class="blk" id="vender"><div class="wrap">
+  <h2>¿Vendés o permutás tu auto?</h2>
+  <p class="sub">Contanos qué tenés y te pasamos una cotización por WhatsApp. Tomamos usados como parte de pago, preferentemente de menos de 200.000 km. La tasación final se hace en persona.</p>
+  <form class="sell" id="sell">
+    <input name="marca" placeholder="Marca y modelo" required>
+    <input name="anio" placeholder="Año" inputmode="numeric" required>
+    <input name="km" placeholder="Kilómetros" inputmode="numeric" required>
+    <input name="ver" placeholder="Versión (opcional)">
+    <button class="btn btn-wa" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Pedir cotización por WhatsApp</button>
+  </form>
+</div></section>
+
+<section class="blk" id="financiacion"><div class="wrap">
+  <h2>Financiación y formas de pago</h2>
+  <div class="two">
+    <div class="box"><h3>Financiación bancaria con DNI</h3><p>Cuotas fijas en pesos. El monto a financiar depende del año del vehículo y de la aprobación de la entidad.</p>
+      <ul><li>Solo con DNI, sin vueltas</li><li>Cuotas fijas y en pesos</li><li>Cotizamos cada caso por WhatsApp</li></ul></div>
+    <div class="box"><h3>Tomamos tu usado</h3><p>Usá tu auto como parte de pago. Mandanos fotos, video y datos y te damos una estimación en el momento.</p>
+      <ul><li>Cotización en el día</li><li>Transferencia con nuestra gestoría</li><li>Señás y retirás en la semana</li></ul></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap cols">
+  <div><div class="logo" style="margin-bottom:10px">CARILO <b>MOTORS</b></div>
+    <p>Av. Sarmiento 2671, Castelar · Zona Oeste<br><a href="https://maps.google.com/?q=Av.+Sarmiento+2671,+Castelar,+Buenos+Aires" target="_blank" rel="noopener" style="color:var(--cel)">Cómo llegar →</a></p></div>
+  <div><h4>Horarios</h4><p>Lunes a viernes 9 a 18 h<br>Sábados 9 a 14 h</p></div>
+  <div><h4>Contacto</h4><p><a data-wa="Hola Carilo Motors! Quería hacer una consulta." target="_blank" rel="noopener">WhatsApp 11 3602-6395</a><br><a href="tel:+541136026395">Llamar</a></p></div>
+</div>
+<div class="wrap" style="margin-top:26px;font-size:12.5px;opacity:.7" id="upd"></div>
+</footer>
+
+<a class="fab" data-wa="Hola Carilo Motors! Quería hacer una consulta." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg></a>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast"></div>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.4"/></symbol>
+</defs></svg>
+
+<script>
+const WA = '5491136026395';
+const SITE = location.origin + location.pathname;
+const DOLAR = 1600; // solo para ordenar precios en distintas monedas
+const TIPOS = [['todos','Todos'],['auto','Autos'],['suv','SUV'],['pickup','Pick-ups'],['moto','Motos']];
+const EXTRAS = [['aut','Automáticos'],['gnc','Con GNC'],['usd','En dólares'],['ars','En pesos']];
+let ALL = [], st = {tipo:'todos', ex:new Set(), q:'', sort:'rec'};
+
+const $ = s => document.querySelector(s);
+const fmtN = n => n.toLocaleString('es-AR');
+const money = (cur, n) => n ? (cur === 'US$' ? 'US$ ' : '$ ') + fmtN(n) : 'Consultar';
+const kmTxt = v => v.km === 0 ? '0 km' : fmtN(v.km) + ' km';
+const titulo = v => `${v.marca} ${v.modelo}`;
+const waLink = msg => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ars = v => v.precio * (v.cur === 'US$' ? DOLAR : 1);
+const IC = {
+  cam:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>',
+  x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+  sh:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>',
+  l:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 18-6-6 6-6"/></svg>',
+  r:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 18 6-6-6-6"/></svg>',
+  ml:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>'
+};
+
+function setWaLinks(root=document){ root.querySelectorAll('[data-wa]').forEach(a => a.href = waLink(a.dataset.wa)); }
+
+function chips(){
+  const c = t => t === 'todos' ? ALL.length : ALL.filter(v => v.tipo === t).length;
+  $('#chips').innerHTML =
+    TIPOS.filter(([t]) => t === 'todos' || c(t)).map(([t,l]) => `<button class="chip ${st.tipo===t?'on':''}" data-t="${t}">${l}<span>${c(t)}</span></button>`).join('') +
+    '<i class="sep"></i>' +
+    EXTRAS.map(([k,l]) => `<button class="chip ${st.ex.has(k)?'on':''}" data-x="${k}">${l}</button>`).join('');
+}
+
+function filtered(){
+  const q = st.q.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  let r = ALL.filter(v => {
+    if (st.tipo !== 'todos' && v.tipo !== st.tipo) return false;
+    if (st.ex.has('aut') && !/autom/i.test(v.caja)) return false;
+    if (st.ex.has('gnc') && !v.gnc) return false;
+    if (st.ex.has('usd') && v.cur !== 'US$') return false;
+    if (st.ex.has('ars') && v.cur !== '$') return false;
+    if (q){
+      const h = `${v.marca} ${v.modelo} ${v.version} ${v.anio} ${v.comb} ${v.caja} ${v.code}`.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+      if (!q.split(/\s+/).every(w => h.includes(w))) return false;
+    }
+    return true;
+  });
+  const S = {pa:(a,b)=>ars(a)-ars(b), pd:(a,b)=>ars(b)-ars(a), an:(a,b)=>b.anio-a.anio||a.km-b.km, km:(a,b)=>a.km-b.km};
+  if (S[st.sort]) r = [...r].sort(S[st.sort]);
+  return r;
+}
+
+function card(v){
+  const sp = [kmTxt(v), v.caja, v.comb].filter(Boolean);
+  return `<a class="card" href="#${v.code}">
+    <div class="ph"><img loading="lazy" src="${esc(v.fotos[0])}" alt="${esc(titulo(v))} ${v.anio}">
+      <span class="badge">${v.code}</span>${v.km===0?'<span class="badge cel">0 KM</span>':''}
+      <span class="yr">${v.anio}</span><span class="nf">${IC.cam}${v.fotos.length}</span></div>
+    <div class="bd">
+      <div class="mk">${esc(v.marca)}</div>
+      <div class="md">${esc(v.modelo)}</div>
+      <div class="vr">${esc(v.version)}</div>
+      <div class="specs">${sp.map(s=>`<span>${esc(s)}</span>`).join('')}</div>
+      <div class="pr"><div><div class="l">Contado</div><div class="v">${money(v.cur,v.precio)}</div></div>
+        ${v.permuta?`<div class="p"><div class="l">Con permuta</div><div class="v">${money(v.cur,v.permuta)}</div></div>`:''}</div>
+    </div></a>`;
+}
+
+function render(){
+  chips();
+  const r = filtered();
+  $('#count').textContent = `${r.length} ${r.length===1?'vehículo':'vehículos'} disponibles`;
+  $('#grid').innerHTML = r.length ? r.map(card).join('') : '<div class="empty">No encontramos vehículos con esos filtros. <br><a style="color:var(--cel)" data-wa="Hola! Busco un vehículo que no vi en el catálogo." target="_blank">Contanos qué buscás →</a></div>';
+  setWaLinks($('#grid'));
+}
+
+/* ---------- ficha ---------- */
+function ficha(v){
+  const msg = `Hola Carilo Motors! Me interesa el ${titulo(v)} ${v.version} ${v.anio} (${v.code}) que vi en la web. ¿Sigue disponible?\n${SITE}#${v.code}`;
+  const rows = [['Marca',v.marca],['Modelo',v.modelo],['Versión',v.version],['Año',v.anio],['Kilómetros',kmTxt(v)],['Combustible',v.comb],['Transmisión',v.caja],
+    ['Motor',v.motor],['Potencia',v.potencia],['Tracción',v.traccion],['Dirección',v.direccion],['Carrocería',v.carroceria],['Puertas',v.puertas],['Color',v.color],['Código',v.code]]
+    .filter(r => r[1]);
+  const ph = v.fotos.map((f,i)=>`<img src="${esc(f)}" alt="${esc(titulo(v))} foto ${i+1}" ${i>1?'loading="lazy"':''}>`).join('');
+  $('#ov').innerHTML = `
+  <div class="bar"><button class="iconbtn" onclick="closeFicha()" aria-label="Volver">${IC.l}</button>
+    <div class="ttl">${esc(titulo(v))} ${v.anio}</div>
+    <button class="iconbtn" onclick="share('${v.code}')" aria-label="Compartir">${IC.sh}</button></div>
+  <div class="fx">
+    <div>
+      <div class="gal"><div class="slides" id="sl">${ph}</div>
+        <button class="gnav l" onclick="go(-1)" aria-label="Anterior">${IC.l}</button><button class="gnav r" onclick="go(1)" aria-label="Siguiente">${IC.r}</button>
+        <div class="gcount" id="gc">1 / ${v.fotos.length}</div></div>
+      <div class="thumbs" id="th">${v.fotos.map((f,i)=>`<img src="${esc(f)}" data-i="${i}" loading="lazy" alt="">`).join('')}</div>
+    </div>
+    <div class="info">
+      <div class="mk">${esc(v.marca)} · ${v.code}</div>
+      <h1>${esc(v.modelo)}</h1>
+      <div class="vr">${esc(v.version)}</div>
+      <div class="kpis"><div class="kpi"><small>Año</small><b>${v.anio}</b></div><div class="kpi"><small>Km</small><b>${kmTxt(v)}</b></div>
+        <div class="kpi"><small>Caja</small><b>${esc(v.caja||'-')}</b></div><div class="kpi"><small>Comb.</small><b>${esc(v.comb||'-')}</b></div></div>
+      <div class="pbox"><div><div class="l">Precio contado</div><div class="v">${money(v.cur,v.precio)}</div></div>
+        ${v.permuta?`<div class="p"><div class="l">Con permuta</div><div class="v">${money(v.cur,v.permuta)}</div></div>`:''}
+        <div class="note">Gastos de transferencia a cargo del comprador. Precios sujetos a cambio sin previo aviso.</div></div>
+      <div class="acts"><a class="btn btn-wa" href="${waLink(msg)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Consultar por WhatsApp</a>
+        <button class="btn btn-ghost" onclick="share('${v.code}')">${IC.sh}Compartir</button>
+        ${v.ml?`<a class="btn btn-ghost" href="https://auto.mercadolibre.com.ar/${v.ml.replace('MLA','MLA-')}" target="_blank" rel="noopener" title="Ver en Mercado Libre">${IC.ml}ML</a>`:''}</div>
+      ${v.texto?`<div class="h3">Descripción</div><p class="txt">${esc(v.texto)}</p>`:''}
+      ${v.eq.length?`<div class="h3">Equipamiento</div><div class="eqs">${v.eq.map(e=>`<span>${esc(e)}</span>`).join('')}</div>`:''}
+      <div class="h3">Ficha técnica</div><table class="sp">${rows.map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1])}</td></tr>`).join('')}</table>
+      <div class="h3">Cómo comprarlo</div>
+      <div class="cta2">
+        <div class="box"><h3>Tomamos tu usado</h3><p>Mandanos fotos y datos de tu auto y te cotizamos en el momento.</p></div>
+        <div class="box"><h3>Financiación con DNI</h3><p>Cuotas fijas en pesos, sujeto a aprobación. Consultanos según el año del vehículo.</p></div>
+        <div class="box"><h3>Venilo a ver</h3><p>Av. Sarmiento 2671, Castelar. Lun a vie 9–18 h, sáb 9–14 h. Coordinamos prueba de manejo.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="sticky-cta"><a class="btn btn-wa" href="${waLink(msg)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Consultar por WhatsApp</a>
+    <button class="btn btn-ghost" onclick="share('${v.code}')" aria-label="Compartir">${IC.sh}</button></div>`;
+  const ov = $('#ov'); ov.classList.add('open'); ov.scrollTop = 0; document.body.style.overflow = 'hidden';
+  document.title = `${titulo(v)} ${v.anio} · Carilo Motors`;
+  const sl = $('#sl'), th = [...document.querySelectorAll('#th img')];
+  const upd = () => { const i = Math.round(sl.scrollLeft / sl.clientWidth); $('#gc').textContent = `${i+1} / ${v.fotos.length}`;
+    th.forEach((t,j)=>t.classList.toggle('on',j===i)); th[i]?.scrollIntoView({block:'nearest',inline:'center'}); };
+  sl.addEventListener('scroll', () => requestAnimationFrame(upd), {passive:true});
+  th.forEach(t => t.onclick = () => sl.scrollTo({left: t.dataset.i * sl.clientWidth, behavior:'smooth'}));
+  upd();
+}
+function go(d){ const sl = $('#sl'); sl.scrollBy({left: d * sl.clientWidth, behavior:'smooth'}); }
+function closeFicha(){ if (location.hash.length > 1) history.pushState('', '', location.pathname + location.search); route(); }
+function route(){
+  const code = decodeURIComponent(location.hash.slice(1));
+  const v = ALL.find(x => x.code === code);
+  if (v) ficha(v);
+  else { $('#ov').classList.remove('open'); $('#ov').innerHTML=''; document.body.style.overflow=''; document.title='Carilo Motors · Autos usados en Castelar'; }
+}
+function toast(t){ const e=$('#toast'); e.textContent=t; e.classList.add('on'); setTimeout(()=>e.classList.remove('on'),1800); }
+async function share(code){
+  const v = ALL.find(x=>x.code===code), url = `${SITE}#${code}`;
+  const text = `${titulo(v)} ${v.anio} · ${kmTxt(v)} · ${money(v.cur,v.precio)}`;
+  try { if (navigator.share) { await navigator.share({title:'Carilo Motors', text, url}); return; } } catch(e){ return; }
+  try { await navigator.clipboard.writeText(`${text}\n${url}`); toast('Link copiado'); } catch(e){ prompt('Copiá el link:', url); }
+}
+document.addEventListener('keydown', e => { if (!$('#ov').classList.contains('open')) return;
+  if (e.key==='Escape') closeFicha(); if (e.key==='ArrowRight') go(1); if (e.key==='ArrowLeft') go(-1); });
+
+/* ---------- eventos ---------- */
+$('#chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return;
+  if (b.dataset.t) st.tipo = b.dataset.t;
+  if (b.dataset.x) { const k=b.dataset.x; st.ex.has(k)?st.ex.delete(k):st.ex.add(k);
+    if (k==='usd') st.ex.delete('ars'); if (k==='ars') st.ex.delete('usd'); }
+  render(); });
+$('#q').addEventListener('input', e => { st.q = e.target.value; render(); });
+$('#sort').addEventListener('change', e => { st.sort = e.target.value; render(); });
+$('#sell').addEventListener('submit', e => { e.preventDefault(); const f = new FormData(e.target);
+  const m = `Hola Carilo Motors! Quiero cotizar mi auto:\n• ${f.get('marca')} ${f.get('ver')||''}\n• Año: ${f.get('anio')}\n• Km: ${f.get('km')}\nTe mando fotos.`;
+  window.open(waLink(m), '_blank'); });
+window.addEventListener('hashchange', route);
+
+/* ---------- carga ---------- */
+$('#grid').innerHTML = Array(8).fill('<div class="card"><div class="ph skel"></div><div class="bd"><div class="skel" style="height:60px;border-radius:8px"></div></div></div>').join('');
+setWaLinks();
+fetch('data/autos.json?v=' + Date.now()).then(r => r.json()).then(d => {
+  ALL = d.vehiculos;
+  $('#upd').textContent = `Catálogo actualizado el ${d.actualizado}.`;
+  render(); route();
+}).catch(() => { $('#grid').innerHTML = '<div class="empty">No pudimos cargar el catálogo. Probá de nuevo en un momento.</div>'; });
+</script>
+</body>
+</html>
