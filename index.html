@@ -492,7 +492,8 @@ Promise.all([
   getJ('data/ml/index.json').then(idx => Promise.all(idx.filter(i => !i.pausada).map(i => getJ(`data/ml/${i.id}.json`).then(r => ({...r, code: i.code})).catch(() => null)))),
   getJ('data/extra.json').catch(() => [])
 ]).then(([ml, extra]) => {
-  ALL = [...ml.filter(Boolean).map(fromML), ...extra.filter(x => !x.oculto).map(fromExtra)];
+  const enML = new Set(ml.filter(Boolean).map(r => r.code));
+  ALL = [...ml.filter(Boolean).map(fromML), ...extra.filter(x => !x.oculto && !enML.has(x.code)).map(fromExtra)];
   render(); route();
 }).catch(() => { $('#grid').innerHTML = '<div class="empty">No pudimos cargar el catálogo. Probá de nuevo en un momento.</div>'; });
 </script>

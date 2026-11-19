@@ -47,6 +47,7 @@
     let r = null; try { r = await leer(id); } catch (e) {}
     if (!r) { resumen.push(`AVISO: no pude leer ${id}, se deja como estaba`); continue; }
     const ent = porId[id];
+    if (ent?.ignorar) continue; // misma unidad publicada en las dos cuentas: manda la de Carilo
     const nombre = `${r.a['Marca']} ${r.a['Modelo']} ${r.a['Año']}`;
     if (!ent) {
       const code = 'CM-' + String(++maxCode).padStart(4, '0');
@@ -58,6 +59,7 @@
     r.code = ent.code;
     let prev = null; try { prev = await raw(id + '.json'); } catch (e) {}
     if (prev?.tipo) r.tipo = prev.tipo;
+    else if (/moto|kawasaki|honda cb|yamaha|gilera|keller|corven|motomel|zanella|bajaj/i.test(r.t) && !r.a['Puertas']) r.tipo = 'moto';
     if (ent.pausada) { ent.pausada = false; resumen.push(`REACTIVADO ${ent.code} ${nombre}`); }
     if (prev && canon(prev) === canon(r)) continue;
     if (prev) {
@@ -69,7 +71,7 @@
     }
     archivos.push({ruta: `data/ml/${id}.json`, nuevo: !prev, contenido: fmt(r)});
   }
-  for (const ent of idx) if (!ids.includes(ent.id) && !ent.pausada) {
+  for (const ent of idx) if (!ids.includes(ent.id) && !ent.pausada && !ent.ignorar) {
     ent.pausada = true; resumen.push(`PAUSADO/VENDIDO ${ent.code} (${ent.id}) → sale del catálogo`);
   }
   const idxNuevo = fmt(idx), idxViejo = fmt(await raw('index.json'));
