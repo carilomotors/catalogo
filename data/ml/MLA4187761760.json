@@ -1,0 +1,50 @@
+{
+ "id": "MLA4187761760",
+ "t": "Palio Weekend Adventure 1.6 16v",
+ "cur": "$",
+ "p": 13800000,
+ "perm": 15000000,
+ "a": {
+  "Marca": "Fiat",
+  "Modelo": "Palio Weekend Adventure",
+  "Año": "2014",
+  "Versión": "1.6 16V",
+  "Color": "Marrón",
+  "Kilómetros": "203.400 km",
+  "Tipo de combustible": "Nafta/GNC",
+  "Puertas": "5",
+  "Transmisión": "Manual",
+  "Motor": "1.6",
+  "Tipo de carrocería": "Rural",
+  "Control de tracción": "4x2"
+ },
+ "dir": null,
+ "eq": [
+  "Con cámara de retroceso",
+  "Frenos ABS",
+  "Sensor de estacionamiento",
+  "Airbag para conductor y pasajero",
+  "Cierre centralizado de puertas",
+  "Porta equipaje en techo",
+  "Aire acondicionado",
+  "Cristales eléctricos",
+  "AM/FM"
+ ],
+ "pics": [
+  "752757-MLA121823677005_112026",
+  "744228-MLA119560861160_112026",
+  "601451-MLA119562105800_112026",
+  "954868-MLA119562194812_112026",
+  "888126-MLA121281639243_112026",
+  "923427-MLA121282649699_112026",
+  "925538-MLA121281344629_112026",
+  "990695-MLA121282262817_112026",
+  "861910-MLA121281344631_112026",
+  "825517-MLA121282590099_112026",
+  "869235-MLA121282292757_112026",
+  "916288-MLA121281610409_112026",
+  "746208-MLA119560625816_112026"
+ ],
+ "intro": "Si buscás un auto práctico, rendidor y con espacio para todo, la Palio Weekend Adventure es la opción ideal. Es un rural con estética aventurera, más alto que un auto común y con protecciones, que se mueve igual de bien en la ciudad que en caminos de tierra o en la ruta.\n\nTiene un baúl enorme, perfecto para la familia, para salir de viaje o para trabajar. El motor 1.6 16v tiene buena respuesta, y con el equipo de GNC el gasto por kilómetro es bajísimo, así que es ideal para quien usa mucho el auto. Además tiene pantalla con cámara de marcha atrás y sensor de estacionamiento delantero, que hacen mucho más cómodo estacionar. La mecánica Fiat es sencilla, cualquier taller la conoce y los repuestos se consiguen fácil y a buen precio.",
+ "code": "CM-0140"
+}

@@ -1,0 +1,53 @@
+{
+ "id": "MLA2297917241",
+ "t": "Ford Ecosport 1.6 Xl Plus Mp3 4x2",
+ "cur": "$",
+ "p": 9500000,
+ "perm": 11000000,
+ "a": {
+  "Marca": "Ford",
+  "Modelo": "Ecosport",
+  "Año": "2008",
+  "Versión": "1.6 Xl Plus Mp3 4x2",
+  "Color": "Gris",
+  "Kilómetros": "125.400 km",
+  "Tipo de combustible": "Nafta",
+  "Puertas": "5",
+  "Transmisión": "Manual",
+  "Motor": "1.6",
+  "Tipo de carrocería": "SUV",
+  "Potencia": "98 hp",
+  "Control de tracción": "4x2"
+ },
+ "dir": "Hidráulica",
+ "eq": [
+  "Airbag para conductor y pasajero",
+  "Cierre centralizado de puertas",
+  "Soporte para rueda de auxilio",
+  "Porta equipaje en techo",
+  "Aire acondicionado",
+  "Cristales eléctricos",
+  "Porta vasos",
+  "AM/FM",
+  "Bluetooth",
+  "Reproductor de MP3"
+ ],
+ "pics": [
+  "850854-MLA120007748018_112026",
+  "793259-MLA120008720606_112026",
+  "730468-MLA120008339950_112026",
+  "940752-MLA121758056089_112026",
+  "892220-MLA120007689308_112026",
+  "767045-MLA121757793143_112026",
+  "962107-MLA121757910803_112026",
+  "984558-MLA120007894782_112026",
+  "996446-MLA121757793145_112026",
+  "944813-MLA120007894786_112026",
+  "753302-MLA120007689350_112026",
+  "905891-MLA120007689352_112026",
+  "998670-MLA121757677433_112026",
+  "649864-MLA120008720668_112026"
+ ],
+ "intro": "Si buscás un SUV compacto, práctico para la ciudad y para salir de vez en cuando, esta EcoSport 4x2 2008 es una buena opción. Tiene 125.400 km y es un auto cómodo para el uso diario.\n\nEs de color gris plata, carrocería SUV de 5 puertas, con barras de techo, rueda de auxilio en la tapa y caja manual. Por dentro tiene butacas de tela, radio original Ford y comandos de climatización.",
+ "code": "CM-0142"
+}

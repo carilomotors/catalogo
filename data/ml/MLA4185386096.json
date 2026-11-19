@@ -1,0 +1,51 @@
+{
+ "id": "MLA4185386096",
+ "t": "Renault Sandero Stepway 1.6 Confort",
+ "cur": "$",
+ "p": 9900000,
+ "perm": 11000000,
+ "a": {
+  "Marca": "Renault",
+  "Modelo": "Sandero Stepway",
+  "Año": "2011",
+  "Versión": "1.6 Confort",
+  "Color": "Gris",
+  "Kilómetros": "105.000 km",
+  "Tipo de combustible": "Nafta",
+  "Puertas": "5",
+  "Transmisión": "Manual",
+  "Motor": "1.6",
+  "Tipo de carrocería": "Hatchback",
+  "Potencia": "105 hp",
+  "Control de tracción": "Delantera"
+ },
+ "dir": "Hidráulica",
+ "eq": [
+  "Airbag para conductor y pasajero",
+  "Cierre centralizado de puertas",
+  "Llantas de aleación",
+  "Porta equipaje en techo",
+  "Aire acondicionado",
+  "Computadora de abordo",
+  "Cristales eléctricos",
+  "Porta vasos",
+  "Alarma",
+  "AM/FM"
+ ],
+ "pics": [
+  "882560-MLA121289494715_112026",
+  "873942-MLA119569037338_112026",
+  "636855-MLA119569126568_112026",
+  "972070-MLA119569126624_112026",
+  "866793-MLA121288483659_112026",
+  "781541-MLA119566663032_112026",
+  "866708-MLA119568771390_112026",
+  "906305-MLA119568148358_112026",
+  "942316-MLA121289495023_112026",
+  "989396-MLA119568947816_112026",
+  "880228-MLA121289940323_112026",
+  "925054-MLA119568977662_112026"
+ ],
+ "intro": "El Renault Sandero Stepway Confort 1.6 2011 es un crossover compacto, más alto que un hatchback común, pensado para el uso diario en ciudad. Trae motor 1.6 nafta y caja manual.\n\nCon 105.000 km, es una opción práctica y versátil, con la estética y el despeje al suelo típicos de la línea Stepway.",
+ "code": "CM-0108"
+}

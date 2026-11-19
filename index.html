@@ -487,8 +487,12 @@ function fromExtra(x){
     color:x.color, cur:x.cur, precio:x.p, permuta:x.perm, eq:eqClean(x.eq), fotos, texto:x.texto||'', gnc:/GNC/.test(x.comb)};
 }
 const bust = '?v=' + Date.now();
-Promise.all([fetch('data/ml.json'+bust).then(r=>r.json()), fetch('data/extra.json'+bust).then(r=>r.json()).catch(()=>[])]).then(([ml, extra]) => {
-  ALL = [...ml.filter(r => !r.pausada).map(fromML), ...extra.filter(x => !x.oculto).map(fromExtra)];
+const getJ = u => fetch(u + bust).then(r => r.json());
+Promise.all([
+  getJ('data/ml/index.json').then(idx => Promise.all(idx.filter(i => !i.pausada).map(i => getJ(`data/ml/${i.id}.json`).then(r => ({...r, code: i.code})).catch(() => null)))),
+  getJ('data/extra.json').catch(() => [])
+]).then(([ml, extra]) => {
+  ALL = [...ml.filter(Boolean).map(fromML), ...extra.filter(x => !x.oculto).map(fromExtra)];
   render(); route();
 }).catch(() => { $('#grid').innerHTML = '<div class="empty">No pudimos cargar el catálogo. Probá de nuevo en un momento.</div>'; });
 </script>

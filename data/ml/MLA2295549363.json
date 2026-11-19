@@ -1,0 +1,52 @@
+{
+ "id": "MLA2295549363",
+ "t": "Fiat Siena 1.4 El My 2015",
+ "cur": "$",
+ "p": 8500000,
+ "perm": 9700000,
+ "a": {
+  "Marca": "Fiat",
+  "Modelo": "Siena",
+  "Año": "2014",
+  "Versión": "1.4 El My 2015",
+  "Color": "Negro",
+  "Kilómetros": "360.000 km",
+  "Tipo de combustible": "Nafta/GNC",
+  "Puertas": "4",
+  "Transmisión": "Manual",
+  "Motor": "1.4",
+  "Tipo de carrocería": "Sedán",
+  "Potencia": "82 hp",
+  "Control de tracción": "Delantera"
+ },
+ "dir": "Hidráulica",
+ "eq": [
+  "Frenos ABS",
+  "Airbag conductor",
+  "Airbag para conductor y pasajero",
+  "Desempañador trasero",
+  "Cierre centralizado de puertas",
+  "Aire acondicionado",
+  "Computadora de abordo",
+  "Cristales eléctricos",
+  "Porta vasos",
+  "Climatizador",
+  "AM/FM"
+ ],
+ "pics": [
+  "789968-MLA121697439275_112026",
+  "944287-MLA121697409173_112026",
+  "718993-MLA119952771408_112026",
+  "991308-MLA121697409461_112026",
+  "676660-MLA119952271786_112026",
+  "680294-MLA119952949460_112026",
+  "648692-MLA121697409801_112026",
+  "922445-MLA119952771988_112026",
+  "965797-MLA119952949618_112026",
+  "792948-MLA119952920344_112026",
+  "795610-MLA119952358920_112026",
+  "672190-MLA121697410001_112026"
+ ],
+ "intro": "Si buscás un sedán práctico, económico y con GNC ya instalado, este Siena EL es una muy buena opción. Es un auto cómodo para el día a día, de mecánica conocida y con repuestos accesibles.\n\nEs la versión EL, en color negro, con caja manual. En el baúl tiene el equipo de GNC instalado. Por dentro es simple y funcional, con comandos de climatización y radio.",
+ "code": "CM-0139"
+}

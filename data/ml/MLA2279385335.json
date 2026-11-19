@@ -1,0 +1,53 @@
+{
+ "id": "MLA2279385335",
+ "t": "Volkswagen Fox 1.6 Highline",
+ "cur": "$",
+ "p": 13000000,
+ "perm": 14500000,
+ "a": {
+  "Marca": "Volkswagen",
+  "Modelo": "Fox",
+  "Año": "2011",
+  "Versión": "1.6 Highline",
+  "Color": "Blanco",
+  "Kilómetros": "153.500 km",
+  "Tipo de combustible": "Nafta",
+  "Puertas": "5",
+  "Transmisión": "Manual",
+  "Motor": "1.6",
+  "Tipo de carrocería": "Hatchback",
+  "Potencia": "101 hp",
+  "Control de tracción": "Delantera"
+ },
+ "dir": "Hidráulica",
+ "eq": [
+  "Frenos ABS",
+  "Airbag para conductor y pasajero",
+  "Cierre centralizado de puertas",
+  "Llantas de aleación",
+  "Aire acondicionado",
+  "Computadora de abordo",
+  "Cristales eléctricos",
+  "Comando remoto para radio en el volante",
+  "Porta vasos",
+  "AM/FM",
+  "Reproductor de MP3"
+ ],
+ "pics": [
+  "716710-MLA121287617637_112026",
+  "919909-MLA121289487929_112026",
+  "906671-MLA119568141526_112026",
+  "751032-MLA119567398912_112026",
+  "815090-MLA119567398936_112026",
+  "973670-MLA121289488103_112026",
+  "986601-MLA119568468344_112026",
+  "754235-MLA121288477103_112026",
+  "919185-MLA121287617939_112026",
+  "763438-MLA119568764846_112026",
+  "903425-MLA121287379975_112026",
+  "671419-MLA121287618023_112026",
+  "897803-MLA121288743499_112026"
+ ],
+ "intro": "El Volkswagen Fox 2011 Highline es un hatchback compacto, práctico para moverse en la ciudad y con la versatilidad típica de este modelo. Trae motor 1.6 nafta y caja manual.\n\nCon 153.500 km, es una opción sencilla y funcional, con buen espacio interior para su tamaño, pensada para el uso cotidiano.",
+ "code": "CM-0119"
+}

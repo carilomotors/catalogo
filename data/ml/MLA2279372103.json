@@ -1,0 +1,52 @@
+{
+ "id": "MLA2279372103",
+ "t": "Volkswagen Gol Trend 1.6 Trendline 101cv",
+ "cur": "$",
+ "p": 14700000,
+ "perm": 16000000,
+ "a": {
+  "Marca": "Volkswagen",
+  "Modelo": "Gol Trend",
+  "Año": "2015",
+  "Versión": "1.6 Trendline 101cv",
+  "Color": "Gris",
+  "Kilómetros": "143.000 km",
+  "Tipo de combustible": "Nafta",
+  "Puertas": "5",
+  "Transmisión": "Manual",
+  "Motor": "1.6",
+  "Tipo de carrocería": "Hatchback",
+  "Potencia": "101 hp",
+  "Control de tracción": "Delantera"
+ },
+ "dir": null,
+ "eq": [
+  "Frenos ABS",
+  "Airbag para conductor y pasajero",
+  "Desempañador trasero",
+  "Cierre centralizado de puertas",
+  "Aire acondicionado",
+  "Computadora de abordo",
+  "Cristales eléctricos",
+  "AM/FM",
+  "Reproductor de MP3",
+  "Entrada USB"
+ ],
+ "pics": [
+  "662257-MLA121287610563_112026",
+  "606792-MLA121287283835_112026",
+  "953137-MLA119566145990_112026",
+  "804315-MLA121287640091_112026",
+  "772304-MLA121286687619_112026",
+  "606096-MLA121288469803_112026",
+  "969405-MLA121287223679_112026",
+  "746472-MLA121287610579_112026",
+  "880079-MLA121287372575_112026",
+  "933302-MLA121287313843_112026",
+  "794142-MLA121287432225_112026",
+  "661627-MLA121287432233_112026",
+  "651151-MLA121288736219_112026"
+ ],
+ "intro": "El Volkswagen Gol Trend 2015 Trendline es un hatchback práctico, pensado para el uso diario en ciudad y para quienes buscan un auto compacto y sencillo de mantener. Trae motor 1.6 nafta y caja manual.\n\nCon 143.000 km, es una opción funcional de este segmento, con el tamaño manejable y el habitáculo aprovechable que caracterizan a esta generación del Gol Trend.",
+ "code": "CM-0121"
+}
