@@ -58,7 +58,8 @@
  {
   "id": "MLA2297884153",
   "code": "CM-0097",
-  "pausada": false
+  "pausada": false,
+  "portada": 2
  },
  {
   "id": "MLA2297183523",
@@ -110,7 +111,8 @@
  {
   "id": "MLA4210474446",
   "code": "CM-0135",
-  "pausada": false
+  "pausada": false,
+  "portada": 2
  },
  {
   "id": "MLA2248608371",
@@ -172,8 +174,7 @@
   "id": "MLA2248647619",
   "code": "CM-0082",
   "pausada": false,
-  "cuenta": "hermano",
-  "portada": 2
+  "cuenta": "hermano"
  },
  {
   "id": "MLA4184358578",
