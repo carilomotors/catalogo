@@ -186,9 +186,10 @@
  {
   "id": "MLA2248621789",
   "code": "CM-0102",
-  "pausada": false,
+  "pausada": true,
   "cuenta": "hermano",
-  "portada": 3
+  "portada": 3,
+  "ignorar": "vendida (19/11/2026) - no mostrar aunque siga publicada en ML"
  },
  {
   "id": "MLA4184358604",
