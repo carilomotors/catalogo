@@ -335,6 +335,7 @@ function filtered(){
   });
   const S = {pa:(a,b)=>ars(a)-ars(b), pd:(a,b)=>ars(b)-ars(a), an:(a,b)=>b.anio-a.anio||a.km-b.km, km:(a,b)=>a.km-b.km};
   if (S[st.sort]) r = [...r].sort(S[st.sort]);
+  r = [...r].sort((a, b) => (a.tipo === 'moto') - (b.tipo === 'moto')); // motos siempre al final
   return r;
 }
 
