@@ -145,7 +145,7 @@ footer a:hover{color:var(--txt)}
 .fx>div{min-width:0}.gal{position:relative}
 .slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--r);background:#0d0f13}
 .slides::-webkit-scrollbar{display:none}
-.slides img{flex:none;width:100%;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:center}
+.slides img{flex:none;width:100%;aspect-ratio:4/5;object-fit:contain;background:#0d0f13;scroll-snap-align:center}
 @media(min-width:901px){.slides img{aspect-ratio:4/4.4}}
 @media(max-width:900px){.slides{border-radius:0}}
 .gnav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(8,9,12,.7);border:0;display:grid;place-items:center;cursor:pointer}
@@ -489,7 +489,7 @@ function fromExtra(x){
 const bust = '?v=' + Date.now();
 const getJ = u => fetch(u + bust).then(r => r.json());
 Promise.all([
-  getJ('data/ml/index.json').then(idx => Promise.all(idx.filter(i => !i.pausada).map(i => getJ(`data/ml/${i.id}.json`).then(r => ({...r, code: i.code})).catch(() => null)))),
+  getJ('data/ml/index.json').then(idx => Promise.all(idx.filter(i => !i.pausada).map(i => getJ(`data/ml/${i.id}.json`).then(r => { const p = r.pics || [], k = i.portada; if (k > 0 && k < p.length) r.pics = [p[k], ...p.filter((_, j) => j !== k)]; return {...r, code: i.code}; }).catch(() => null)))),
   getJ('data/extra.json').catch(() => [])
 ]).then(([ml, extra]) => {
   const enML = new Set(ml.filter(Boolean).map(r => r.code));
