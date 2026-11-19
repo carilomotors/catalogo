@@ -1,0 +1,47 @@
+{
+ "id": "MLA2248620579",
+ "t": "Fiat Mobi 1.0 Way",
+ "cur": "$",
+ "p": 12500000,
+ "perm": null,
+ "a": {
+  "Marca": "Fiat",
+  "Modelo": "Mobi",
+  "Año": "2017",
+  "Versión": "1.0 Way",
+  "Color": "Violeta",
+  "Kilómetros": "139.800 km",
+  "Tipo de combustible": "Nafta",
+  "Puertas": "5",
+  "Transmisión": "Manual",
+  "Motor": "1.0",
+  "Tipo de carrocería": "Hatchback",
+  "Potencia": "70 hp",
+  "Control de tracción": "Delantera"
+ },
+ "dir": "Hidráulica",
+ "eq": [
+  "Frenos ABS",
+  "Airbag para conductor y pasajero",
+  "Tracción ASR"
+ ],
+ "pics": [
+  "929857-MLA110602380220_052026",
+  "891075-MLA110303003520_052026",
+  "601897-MLA110302499642_052026",
+  "906818-MLA111232118169_052026",
+  "677874-MLA111231999315_052026",
+  "935883-MLA110302469660_052026",
+  "827993-MLA110303298820_052026",
+  "912216-MLA110301343664_052026",
+  "908600-MLA111231496813_052026",
+  "887567-MLA110302440152_052026",
+  "928479-MLA111232862139_052026",
+  "764441-MLA110303003530_052026",
+  "626904-MLA110301939522_052026",
+  "604156-MLA111232088561_052026",
+  "961094-MLA110302944388_052026"
+ ],
+ "intro": "Equipa motor nafta 1.0 de 70 hp, transmisión manual de 5 velocidades y tracción delantera, una combinación orientada a una conducción ágil y sencilla. La dirección hidráulica contribuye a maniobras cómodas en estacionamiento y en recorridos urbanos.\n\nEntre sus datos de uso se destacan 139800 km recorridos y un consumo medio en ruta de 16.1 km/l, valores que permiten evaluar su historial y eficiencia. El tanque de 47 L ofrece buena autonomía para trayectos diarios y viajes de distancia moderada.\n\nEn seguridad incorpora frenos ABS, airbag para conductor y pasajero, y control de tracción ASR. Son elementos que suman confianza al manejo y acompañan una experiencia más estable en distintas condiciones.\n\nLa versión Way aporta un perfil versátil dentro de la gama Mobi, con color violeta y un formato compacto de 3566 mm de largo, 1854 mm de ancho y 1502 mm de alto. Es una alternativa práctica para quien prioriza maniobrabilidad, equipamiento funcional y un vehículo urbano de uso cotidiano.",
+ "code": "CM-0075"
+}
