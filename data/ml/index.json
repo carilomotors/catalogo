@@ -87,7 +87,8 @@
  {
   "id": "MLA4187761760",
   "code": "CM-0140",
-  "pausada": false
+  "pausada": false,
+  "portada": 2
  },
  {
   "id": "MLA4099516934",
@@ -115,13 +116,15 @@
   "id": "MLA2248620579",
   "code": "CM-0075",
   "pausada": false,
-  "cuenta": "hermano"
+  "cuenta": "hermano",
+  "portada": 1
  },
  {
   "id": "MLA4139783818",
   "code": "CM-0090",
   "pausada": false,
-  "cuenta": "hermano"
+  "cuenta": "hermano",
+  "portada": 1
  },
  {
   "id": "MLA2248646819",
@@ -139,13 +142,15 @@
   "id": "MLA2248646455",
   "code": "CM-0093",
   "pausada": false,
-  "cuenta": "hermano"
+  "cuenta": "hermano",
+  "portada": 1
  },
  {
   "id": "MLA2248607907",
   "code": "CM-0069",
   "pausada": false,
-  "cuenta": "hermano"
+  "cuenta": "hermano",
+  "portada": 2
  },
  {
   "id": "MLA2248647619",
@@ -163,13 +168,15 @@
   "id": "MLA2248621789",
   "code": "CM-0102",
   "pausada": false,
-  "cuenta": "hermano"
+  "cuenta": "hermano",
+  "portada": 2
  },
  {
   "id": "MLA4184358604",
   "code": "CM-0143",
   "pausada": false,
-  "cuenta": "hermano"
+  "cuenta": "hermano",
+  "portada": 2
  },
  {
   "id": "MLA2248621253",
