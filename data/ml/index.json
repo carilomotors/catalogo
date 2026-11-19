@@ -25,8 +25,7 @@
  {
   "id": "MLA2279386877",
   "code": "CM-0120",
-  "pausada": false,
-  "portada": 2
+  "pausada": false
  },
  {
   "id": "MLA4185386096",
@@ -43,14 +42,12 @@
  {
   "id": "MLA4099349402",
   "code": "CM-0128",
-  "pausada": false,
-  "portada": 2
+  "pausada": false
  },
  {
   "id": "MLA4099577252",
   "code": "CM-0070",
-  "pausada": false,
-  "portada": 2
+  "pausada": false
  },
  {
   "id": "MLA2279385335",
@@ -61,8 +58,7 @@
  {
   "id": "MLA2297884153",
   "code": "CM-0097",
-  "pausada": false,
-  "portada": 2
+  "pausada": false
  },
  {
   "id": "MLA2297183523",
@@ -114,8 +110,7 @@
  {
   "id": "MLA4210474446",
   "code": "CM-0135",
-  "pausada": false,
-  "portada": 2
+  "pausada": false
  },
  {
   "id": "MLA2248608371",
