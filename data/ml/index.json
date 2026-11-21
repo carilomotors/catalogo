@@ -217,5 +217,10 @@
   "pausada": true,
   "cuenta": "hermano",
   "ignorar": "duplicado de la cuenta Carilo"
+ },
+ {
+  "id": "MLA4223928756",
+  "code": "CM-0145",
+  "pausada": false
  }
 ]
