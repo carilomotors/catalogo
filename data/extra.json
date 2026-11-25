@@ -1,6 +1,6 @@
 [
 {"code":"CM-0091","marca":"Volkswagen","modelo":"Amarok","version":"V6 Extreme 3.0","anio":2021,"km":64000,"comb":"Diésel","caja":"Automática","tipo":"pickup","cur":"US$","p":37000,"perm":39000,"img":"cm-0091","n":16,"cover":3},
-{"code":"CM-0069","marca":"RAM","modelo":"1500","version":"Laramie","anio":2015,"km":189000,"comb":"Nafta","caja":"Automática","tipo":"pickup","cur":"US$","p":29900,"perm":32000,"img":"cm-0069","n":16,"cover":3},
+{"code":"CM-0069","marca":"RAM","modelo":"1500","version":"Laramie","anio":2015,"km":189000,"comb":"Nafta","caja":"Automática","tipo":"pickup","cur":"US$","p":29900,"perm":33000,"img":"cm-0069","n":16,"cover":3},
 {"code":"CM-0076","marca":"Fiat","modelo":"Toro","version":"Freedom 2.0 4x2","anio":2016,"km":94100,"comb":"Diésel","caja":"Manual","tipo":"pickup","cur":"$","p":22000000,"perm":23500000,"img":"cm-0076","n":15,"cover":3},
 {"code":"CM-0080","marca":"Volkswagen","modelo":"Tiguan","version":"Sport & Style 2.0 TSI 4Motion","anio":2013,"km":158300,"comb":"Nafta","caja":"Automática","tipo":"suv","cur":"US$","p":15500,"perm":16500,"img":"cm-0080","n":16,"cover":3},
 {"code":"CM-0093","marca":"Volkswagen","modelo":"Touareg","version":"Premium 4.2 V8","anio":2008,"km":141200,"comb":"Nafta","caja":"Automática","tipo":"suv","cur":"US$","p":16000,"perm":17500,"img":"cm-0093","n":16,"cover":3},
