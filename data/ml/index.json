@@ -131,7 +131,7 @@
  {
   "id": "MLA2248620579",
   "code": "CM-0075",
-  "pausada": false,
+  "pausada": true,
   "cuenta": "hermano",
   "portada": 3
  },
@@ -173,7 +173,7 @@
  {
   "id": "MLA2248647619",
   "code": "CM-0082",
-  "pausada": false,
+  "pausada": true,
   "cuenta": "hermano"
  },
  {
